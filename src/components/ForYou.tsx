@@ -1,15 +1,17 @@
 'use client'
 import React from 'react'
 import { useAuth } from '@/hooks/useAuth'
-import { Bell, Settings } from 'lucide-react'
+import { Bell, LogOut, Settings } from 'lucide-react'
 
 const ForYou = () => {
 
-  const { user } = useAuth()
+  const { user, signOut } = useAuth()
 
   return (
     <div className='w-full flex flex-col gap-3'>
       <div className='w-full flex items-center justify-end gap-3 text-grey'>
+        <LogOut onClick={signOut} className='cursor-pointer' />
+
         <Bell size={20} />
 
         <Settings size={20} />
