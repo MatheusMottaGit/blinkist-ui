@@ -1,5 +1,6 @@
 'use client'
 import Button from '@/components/Button'
+import Loading from '@/components/Loading'
 import Logo from '@/components/Logo'
 import { useAuth } from '@/hooks/useAuth'
 
@@ -25,10 +26,10 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col gap-2 w-full'>
-          <Button onClick={signIn} className='bg-green-secondary-300 rounded-sm p-2 text-primary font-bold hover:bg-emerald-800 transition-colors'>
+          <Button onClick={signIn} className='bg-green-secondary-300 rounded-sm p-2 text-primary font-bold hover:bg-emerald-800 transition-colors inline-flex justify-center'>
             {
               isLoading ? (
-                <span>Loading...</span>
+                <Loading />
               ) : (
                 <span>Login</span>
               )
