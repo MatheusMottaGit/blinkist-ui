@@ -34,6 +34,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   function signOut() {
     Cookie.remove('token')
+    push('/')
   }
 
   return (
